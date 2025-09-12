@@ -1,26 +1,54 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Cores customizadas */
+  --color-background: #fffafa;
+  --color-card-bg: #ffffff;
+  --color-border: #fbebf1;
+  --color-text-base: #A799B7; 
+  --color-text-secondary: #6b7280;
+  --color-primary: #ec4899;
+  --color-primary-hover: #db2777; 
+  --color-lilac-light: #E9D5FF; 
+  --color-lilac-dark: #8667A1;
+  --color-lilac-dark-hover: #6c5484;
+  --color-white: #ffffff;
+
+  /* Sombras customizadas */
+  --shadow-lg-pink: 0 10px 15px -3px rgba(236, 72, 153, 0.1), 0 4px 6px -2px rgba(236, 72, 153, 0.05);
+  --shadow-xl-pink: 0 20px 25px -5px rgba(236, 72, 153, 0.15), 0 10px 10px -5px rgba(236, 72, 153, 0.04);
+
+  /* Fontes customizadas */
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body { 
+  color: var(--color-text-base);
+  font-family: var(--font-poppins); 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.about-card, .post-card {
+  border-radius: 1rem;
+}
+
+.imagem-card {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.card {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    width: 90%;
+  }
+  .card-botton {
+    width: 50%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
