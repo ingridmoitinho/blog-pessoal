@@ -77,7 +77,7 @@ O projeto foi desenvolvido seguindo as especificações do documento **"Projeto 
 ## 🚀 Deploy
 
 Este projeto está hospedado na [Vercel](https://vercel.com/).  
-🔗 Acesse em: **[https://meu-blog.vercel.app](https://meu-blog.vercel.app)**  
+🔗 Acesse em: **[Blog Pessoal](https://blog-pessoal-psi-ten.vercel.app/)**  
 
 ---
 
