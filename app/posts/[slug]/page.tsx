@@ -1,14 +1,13 @@
 import { notFound } from 'next/navigation';
 import { posts } from '@/lib/posts';
 import LikeButton from '@/components/LikeButton';
+import CommentForm from '@/components/CommentForm'; 
 
 interface PostPageProps {
   params: { slug: string };
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  // O log de erro indica que 'params' é uma Promise.
-  // Precisamos usar 'await' para resolver a Promise e obter o objeto com o slug.
+export default async function PostPage({ params }: PostPageProps) {  
   const { slug } = await params;
 
   // Garante que o slug é uma string válida
@@ -46,6 +45,16 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
 
+ {/* Seção de Comentários */}
+      <div className="mt-10">
+        <h2 className="text-2xl font-semibold font-playfair text-lilac-dark mb-4 text-center">
+          Comentários
+        </h2>
+        <p className="text-text-base text-center">
+          Deixe o seu comentário abaixo.
+        </p>
+        <CommentForm postId={String(post.postId)} /> 
+      </div>
     </article>
   );
 }

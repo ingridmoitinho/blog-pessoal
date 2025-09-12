@@ -38,15 +38,12 @@ body {
   border-radius: 1rem 0 0 1rem;
 }
 
-.card {
-  width: 50%;
-}
-
 @media (max-width: 768px) {
   .post-card {
     width: 90%;
+    font-size: 0.8rem;
   }
-  .card-botton {
+  .card-bottom {
     width: 50%;
   }
 }

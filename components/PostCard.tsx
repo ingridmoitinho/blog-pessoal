@@ -49,7 +49,7 @@ export default function PostCard({ post }: { post: Post }) {
 
               <div className="flex justify-center mt-4 w-full">
                 <div
-                  className="bg-lilac-dark text-white no-underline font-semibold py-2 px-4 rounded-full w-2/6 hover:bg-lilac-dark-hover transition-colors flex justify-center items-center card-botton"
+                  className="bg-lilac-dark text-white no-underline font-semibold py-2 px-4 rounded-full w-2/6 hover:bg-lilac-dark-hover transition-colors flex justify-center items-center card-bottom"
                 >
                   Ler mais ⮞
                 </div>
